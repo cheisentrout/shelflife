@@ -1,6 +1,6 @@
 # ShelfLife
 
-A community toy-swapping platform that helps kids connect with developmentally supportive play activities, parents share resources rather than spend cash, and builds community.
+A community toy-swapping platform that connects kids with developmentally supportive activities, encourages parents to share resources rather than spend cash, and builds connections.
 
 ## Tech Stack
 
