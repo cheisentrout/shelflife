@@ -2,6 +2,29 @@
 
 A community toy-swapping platform that connects kids with developmentally supportive activities, encourages parents to share resources rather than spend cash, and builds connections. Currently under development.
 
+## Goals
+
+This project serves multiple purposes:
+
+### Technical Learning
+- **Master React fundamentals** - Build a production-ready application using modern React patterns, hooks, and component architecture
+- **Full-stack development** - Gain hands-on experience with the complete application lifecycle, from database design to deployment
+- **Modern tooling** - Work with industry-standard technologies including Next.js App Router, TypeScript, Prisma ORM, and Tailwind CSS
+- **Real-world implementation** - Solve authentic challenges like authentication, file uploads, geolocation, and real-time features
+
+### Product Development
+- **User-centered design** - Build features based on real parent needs and pain points around toy clutter and sustainability
+- **Iterative approach** - Ship a focused MVP, gather feedback, and iterate based on actual usage
+- **Feature prioritization** - Practice making pragmatic scope decisions to balance ambition with deliverability
+- **Community building** - Design systems that encourage trust, safety, and local connections
+
+### Impact
+- **Environmental sustainability** - Reduce toy waste and overconsumption through community sharing
+- **Family support** - Help parents access developmentally appropriate toys without the financial burden
+- **Local connection** - Strengthen neighborhood bonds through shared resources and in-person meetups
+
+This project aims to demonstrate both technical capability and thoughtful product thinking while potentially creating something useful for real families.
+
 ## Tech Stack
 
 - **Frontend:** Next.js 14 (App Router), React, TypeScript, Tailwind CSS
