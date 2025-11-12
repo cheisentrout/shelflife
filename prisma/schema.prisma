@@ -8,6 +8,8 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
+// MODELS
+
 model User {
   id        String   @id @default(cuid())
   clerkId   String   @unique
@@ -15,4 +17,61 @@ model User {
   name      String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  toys Toy[]
+}
+
+model Toy {
+  id          String   @id @default(cuid())
+  
+  // Basic Info
+  title       String
+  description String?
+  brand       String?
+  condition   ToyCondition
+  
+  // Photos
+  photos      String[]
+  
+  // Development
+  developmentalDomains  DevelopmentalDomain[]
+  ageRangeMin Int
+  ageRangeMax Int?
+  materials   String?
+  
+  // Location
+  zipCode     String
+  city        String?
+  state       String?
+  latitude    Float?
+  longitude   Float?
+  
+  // Ownership & Status
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  isAvailable Boolean  @default(true)
+  
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ENUMS
+
+enum ToyCondition {
+  LIKE_NEW
+  EXCELLENT
+  GOOD
+  FAIR
+  WELL_LOVED
+}
+
+enum DevelopmentalDomain {
+  FINE_MOTOR
+  GROSS_MOTOR
+  COGNITIVE
+  LANGUAGE
+  SOCIAL_EMOTIONAL
+  SENSORY
+  PRACTICAL_LIFE
+  CREATIVE
 }

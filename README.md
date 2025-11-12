@@ -116,6 +116,17 @@ Currently in MVP development (Sprint 0 - Setup phase).
 - Messaging system
 - Community meetups
 
+## Future Features
+
+### AI-Powered Toy Rotation Assistant
+Based on feedback from my parent friends, many struggle with the mental load of planning toy rotations at home. We plan to integrate AI recommendations that:
+- Suggest which toys to display each week based on child's developmental stage and what you already have
+- Create custom rotation schedules aligned with learning goals
+- Recommend swaps from the community marketplace that fit rotation needs
+- Reduce decision fatigue while maximizing child engagement
+
+This feature bridges personal toy management with community sharing, making ShelfLife valuable even for toys you own.
+
 ## License
 
 Clare Eisentrout
