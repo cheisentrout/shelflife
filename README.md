@@ -111,10 +111,20 @@ Currently in MVP development (Sprint 0 - Setup phase).
 
 ### Upcoming
 
-- Core data models (Toy, User relationships)
-- Toy listing and browsing features
-- Messaging system
-- Community meetups
+**Phase 1 (Current Sprint):**
+- Toy listing functionality (create, edit, delete)
+- Browse toys with filtering by location and age
+- Community meetup pages and event management
+
+**Phase 2:**
+- In-app messaging system for coordinating swaps
+- Photo upload for toy listings
+- User profiles and toy collection displays
+
+**Phase 3:**
+- Advanced search and filtering
+- Geolocation-based toy discovery
+- Notifications and alerts
 
 ## Future Features
 

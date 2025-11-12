@@ -18,6 +18,8 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   toys Toy[]
+  organizedMeetups  Meetup[]          @relation("MeetupOrganizer")
+  attendingMeetups  MeetupAttendee[]
 }
 
 model Toy {
@@ -53,6 +55,49 @@ model Toy {
   // Timestamps
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+}
+
+model Meetup {
+  id            String   @id @default(cuid())
+  
+  // Basic Info
+  title         String
+  description   String?
+  
+  // When
+  date          DateTime
+  
+  // Where
+  locationName  String?
+  address       String?
+  city          String
+  state         String
+  zipCode       String
+  latitude      Float?
+  longitude     Float?
+  
+  // Organizer
+  organizerId   String
+  organizer     User            @relation("MeetupOrganizer", fields: [organizerId], references: [id], onDelete: Cascade)
+  
+  // Attendees
+  attendees     MeetupAttendee[]
+  maxAttendees  Int?
+  
+  // Timestamps
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model MeetupAttendee {
+  id        String   @id @default(cuid())
+  meetupId  String
+  meetup    Meetup   @relation(fields: [meetupId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  
+  @@unique([meetupId, userId])
 }
 
 // ENUMS
