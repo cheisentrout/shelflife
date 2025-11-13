@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
-import Header from "@/app/components/header/header";
+import Header from "@/app/components/header";
 
 export const metadata: Metadata = {
   title: "ShelfLife",
@@ -14,7 +14,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <html lang="en">
         <body>
           <Header></Header>
-          <div className="px-4 md:px-8 lg:px-16">{children}</div>
+          <div className="px-4 md:px-8 lg:px-16">
+            {children}
+          </div>
         </body>
       </html>
     </ClerkProvider>

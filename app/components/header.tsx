@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/nextjs";
 
@@ -6,7 +7,15 @@ export default function Header() {
   return (
     <header className="bg-stone-50 shadow-sm border-b border-stone-200">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex-shrink-0">
+        {/* Logo Section - Now with Icon */}
+        <div className="flex items-center gap-3 flex-shrink-0">
+          <Image
+            src="/shelflife-icon.png"
+            alt="ShelfLife"
+            width={40}
+            height={40}
+            className="rounded-lg"
+          />
           <Link
             href="/"
             className="text-2xl font-bold text-emerald-700 hover:text-emerald-800 transition-colors"
